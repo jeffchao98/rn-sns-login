@@ -30,12 +30,16 @@ const styles = StyleSheet.create({
 
 const signIn = async () => {
   try {
-    await GoogleSignin.revokeAccess();
-    await GoogleSignin.signOut();
+    // const isSignedIn = await GoogleSignin.isSignedIn();
+    // if(isSignedIn) {
+    //   await GoogleSignin.revokeAccess();
+    //   await GoogleSignin.signOut();
+    //   }
     await GoogleSignin.hasPlayServices();
     const userInfo = await GoogleSignin.signIn();
-    console.warn(JSON.stringify(userInfo))
+    console.warn('ok', JSON.stringify(userInfo))
   } catch (error) {
+    console.warn('error', JSON.stringify(error))
     if (error.code === statusCodes.SIGN_IN_CANCELLED) {
       // user cancelled the login flow
     } else if (error.code === statusCodes.IN_PROGRESS) {

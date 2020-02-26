@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "544976777026",
+    "firebase_url": "https://react-native-test-16917.firebaseio.com",
+    "project_id": "react-native-test-16917",
+    "storage_bucket": "react-native-test-16917.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544976777026:android:3095d785b7c31833a8e2db",
+        "android_client_info": {
+          "package_name": "com.jeffchao98.example.SNSLogins"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544976777026-v7r2146krgdecgi8durdaic655u6cb92.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jeffchao98.example.SNSLogins",
+            "certificate_hash": "a0325b05a8b5cca44139c94dcd60409e0b32c7c7"
+          }
+        },
+        {
+          "client_id": "544976777026-0sgs7oeousa2i18nh5g03cb6oj39dbhq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjDJK-T2I2CspnMR-4En_ddGFMeO-qdFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544976777026-0sgs7oeousa2i18nh5g03cb6oj39dbhq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "544976777026-87n5ss6mrgv58gu6tutgbvio40nevuka.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jeffchao98.example.SNSLogins"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
