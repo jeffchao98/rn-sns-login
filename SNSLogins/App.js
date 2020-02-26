@@ -20,7 +20,9 @@ import {
 
 import { Button } from './app/component'
 
-GoogleSignin.configure();
+GoogleSignin.configure({
+  webClientId: '544976777026-0sgs7oeousa2i18nh5g03cb6oj39dbhq.apps.googleusercontent.com'
+});
 
 const styles = StyleSheet.create({
   container: {
