@@ -17,6 +17,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* SNSLoginsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SNSLoginsTests.m */; };
+		41C602F824061F3B00965406 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41C602F724061F3B00965406 /* GoogleService-Info.plist */; };
 		4E26E078282FDCE19BF95B57 /* libPods-SNSLogins-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5571D7B52F4126920B3420 /* libPods-SNSLogins-tvOSTests.a */; };
 		834DBA2AC5A2244195B4FBD9 /* libPods-SNSLoginsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEC5336D560F3C90AF98E9A /* libPods-SNSLoginsTests.a */; };
 		BD3A414E66ECFAAC29E02FAE /* libPods-SNSLogins-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F41CA8BD8C8CD5CF0BC90B05 /* libPods-SNSLogins-tvOS.a */; };
@@ -55,6 +56,7 @@
 		2D02E47B1E0B4A5D006451C7 /* SNSLogins-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SNSLogins-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* SNSLogins-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SNSLogins-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E6251B5B3ED7CFDD583358 /* Pods-SNSLoginsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSLoginsTests.release.xcconfig"; path = "Target Support Files/Pods-SNSLoginsTests/Pods-SNSLoginsTests.release.xcconfig"; sourceTree = "<group>"; };
+		41C602F724061F3B00965406 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48BC7D241B2171A3B0303EC9 /* Pods-SNSLogins.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSLogins.release.xcconfig"; path = "Target Support Files/Pods-SNSLogins/Pods-SNSLogins.release.xcconfig"; sourceTree = "<group>"; };
 		5ABE95A6CAE20F0F29802B6D /* Pods-SNSLogins-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSLogins-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SNSLogins-tvOSTests/Pods-SNSLogins-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		691BF2BAA1004F21F6A59119 /* Pods-SNSLogins-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSLogins-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SNSLogins-tvOS/Pods-SNSLogins-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				41C602F724061F3B00965406 /* GoogleService-Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -194,7 +197,6 @@
 				6EA1A442321E175426E14963 /* Pods-SNSLoginsTests.debug.xcconfig */,
 				37E6251B5B3ED7CFDD583358 /* Pods-SNSLoginsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -309,6 +311,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -339,6 +342,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				41C602F824061F3B00965406 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +658,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffchao98.example.SNSLogins;
 				PRODUCT_NAME = SNSLogins;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -673,7 +677,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffchao98.example.SNSLogins;
 				PRODUCT_NAME = SNSLogins;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
