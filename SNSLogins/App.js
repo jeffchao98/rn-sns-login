@@ -17,6 +17,7 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from '@react-native-community/google-signin';
+import { LoginManager, AccessToken } from "react-native-fbsdk";
 
 import { Button } from './app/component'
 
@@ -49,10 +50,35 @@ const signIn = async () => {
   }
 };
 
+const fbSignIn = () => {
+  LoginManager.logInWithPermissions(["public_profile"]).then(
+    function(result) {
+      if (result.isCancelled) {
+        console.log("Login cancelled");
+      } else {
+        console.warn('ok', JSON.stringify(result))
+        AccessToken.getCurrentAccessToken().then(
+          (data) => {
+            console.warn('token', data.accessToken.toString())
+          }
+        )
+        console.log(
+          "Login success with permissions: " +
+            result.grantedPermissions.toString()
+        );
+      }
+    },
+    function(error) {
+      console.log("Login fail with error: " + error);
+    }
+  );
+}
+
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Button onPress={() => { signIn() }} />
+      <Button onPress={() => { fbSignIn() }} />
     </SafeAreaView>
   )
 }
