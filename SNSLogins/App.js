@@ -32,11 +32,6 @@ const styles = StyleSheet.create({
 
 const signIn = async () => {
   try {
-    // const isSignedIn = await GoogleSignin.isSignedIn();
-    // if(isSignedIn) {
-    //   await GoogleSignin.revokeAccess();
-    //   await GoogleSignin.signOut();
-    //   }
     await GoogleSignin.hasPlayServices();
     const userInfo = await GoogleSignin.signIn();
     console.warn('ok', JSON.stringify(userInfo))
