@@ -10,6 +10,7 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 @import Firebase;
 
 @implementation AppDelegate
@@ -30,6 +31,15 @@
   [self.window makeKeyAndVisible];
   [FIRApp configure];
   return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+
+  BOOL handled =  [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url options:options];
+  // Add any custom logic here.
+  return handled;
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
